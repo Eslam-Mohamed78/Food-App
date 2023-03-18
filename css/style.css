@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+/* body {
+	overflow: hidden;
+}
+aside {display: none;} */
+
+/* loading spin */
+.single-meal {
+  display: none;
+}
+.spinner {
+  margin: 355px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #fff;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+
+body {
+  background-color: #0d0d0d;
+  font-family: "Roboto", sans-serif;
+}
+::placeholder {
+  color: #d0f4fc !important;
+}
+span {
+  display: inline-block;
+}
+
+/* =============== main page =============== */
+
+main .meal {
+  overflow: hidden;
+  cursor: pointer;
+}
+main .meal-info,
+main .category-info {
+  overflow: hidden;
+  transition: transform 0.4s ease;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .category-info {
+  text-align: center;
+}
+main .description {
+  font-size: 16px;
+  font-weight: 400;
+  height: 100px;
+}
+main .meal:hover .meal-info,
+main .meal:hover .category-info {
+  transform: translateY(-100%);
+}
+
+/* =============== aside =============== */
+
+aside {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+}
+aside .links {
+  background-color: #0d0d0d;
+  width: 255px;
+}
+aside .links ul li {
+  cursor: pointer;
+  transition: color 0.4s ease, font-size 0.4s ease;
+}
+aside .links ul li:hover {
+  color: #ffc119;
+  font-size: 19px;
+}
+aside .icons .image {
+  width: 50px;
+}
+aside i {
+  cursor: pointer;
+}
+
+/* =============== single meal page =============== */
+
+main .single-meal .category span,
+main .single-meal .area span {
+  color: #ffc119;
+}
+main .single-meal .ingredient span {
+  background-color: #ffc119;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+main .single-meal .tags span {
+  background-color: #f8d7da;
+  color: #842029;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* =============== Third Link (Area) =============== */
+main .meal i.fa-house-laptop,
+main .meal i.fa-drumstick-bite {
+  font-size: 70px !important;
+}
+
+/* =============== Fifth Link (Contact) =============== */
+
+main .input-fields span.submit {
+  margin-top: 25px;
+  width: fit-content;
+  margin-inline: auto;
+}
+main .input-fields span.submit:hover {
+  color: white !important;
+}
+main .input-fields .validation {
+  background-color: #f8d7da;
+}
