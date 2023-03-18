@@ -126,6 +126,7 @@ $("aside .links ul li:nth-child(2)").click(async () => {
     $("main .all-meals .meal-data").html(mealsContainer);
 
     // display single meal
+    $("main .single-meal").css('display', 'flex')
     const baseUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
     const singleMealCategory = new InsideCategory(baseUrl);
     singleMealCategory.singleMealInside();
@@ -178,6 +179,7 @@ $("aside .links ul li:nth-child(3)").click(async () => {
     $("main .all-meals .meal-data").html(mealsContainer);
 
     // display single meal
+    $("main .single-meal").css('display', 'flex')
     const baseUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
     const singleMealArea = new InsideCategory(baseUrl);
     singleMealArea.singleMealInside();
@@ -234,6 +236,7 @@ $("aside .links ul li:nth-child(4)").click(async () => {
     $("main .all-meals .meal-data").html(mealsContainer);
 
     // display single meal
+    $("main .single-meal").css('display', 'flex')
     const baseUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
     const singleMealIngredient = new InsideCategory(baseUrl);
     singleMealIngredient.singleMealInside();
