@@ -6,12 +6,12 @@ import InsideCategory from "./singleMealInside.js";
 import Contact from "./contact.js";
 
 // =============== main page meals ===============
-// $(function () {
-//   $(".spinner").fadeOut(1000, async () => {
-//     $("body").css("overflow", "auto");
-//     $("aside").css("display", "block");
-//   });
-// });
+$(function () {
+  $(".spinner").fadeOut(1000, async () => {
+    $("body").css("overflow", "auto");
+    $("aside").css("display", "block");
+  });
+});
 $("main .single-meal").css('display', 'none')
 
 
