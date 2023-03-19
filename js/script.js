@@ -12,8 +12,7 @@ $(function () {
     $("aside").css("display", "block");
   });
 });
-$("main .single-meal").css('display', 'none')
-
+$("main .single-meal").css("display", "none");
 
 const mainMeals = new Meals(
   "https://www.themealdb.com/api/json/v1/1/search.php?s="
@@ -27,9 +26,8 @@ $("main .all-meals .meal-data").html(mealsContainer);
 // =============== single meal page ===============
 
 export function clickMeal(displayedMeals) {
- 
-  $("main .meal-info").click(function (e) { 
-    $("main .single-meal").css('display', 'flex')
+  $("main .meal-info").click(function (e) {
+    $("main .single-meal").css("display", "flex");
     const mealName = e.target.innerText;
     console.log(mealName);
 
@@ -69,7 +67,7 @@ const links = new Links();
 
 $("aside .links ul li:first-child").click(async () => {
   $("main .all-meals .meal-data").removeClass("d-none");
-  $("main .single-meal").css('display', 'none')
+  $("main .single-meal").css("display", "none");
   $("main .all-meals").removeClass("d-none");
 
   asideNav.asideToggle();
@@ -126,7 +124,7 @@ $("aside .links ul li:nth-child(2)").click(async () => {
     $("main .all-meals .meal-data").html(mealsContainer);
 
     // display single meal
-    $("main .single-meal").css('display', 'flex')
+    $("main .single-meal").css("display", "flex");
     const baseUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
     const singleMealCategory = new InsideCategory(baseUrl);
     singleMealCategory.singleMealInside();
@@ -179,7 +177,7 @@ $("aside .links ul li:nth-child(3)").click(async () => {
     $("main .all-meals .meal-data").html(mealsContainer);
 
     // display single meal
-    $("main .single-meal").css('display', 'flex')
+    $("main .single-meal").css("display", "flex");
     const baseUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
     const singleMealArea = new InsideCategory(baseUrl);
     singleMealArea.singleMealInside();
@@ -236,7 +234,7 @@ $("aside .links ul li:nth-child(4)").click(async () => {
     $("main .all-meals .meal-data").html(mealsContainer);
 
     // display single meal
-    $("main .single-meal").css('display', 'flex')
+    $("main .single-meal").css("display", "flex");
     const baseUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
     const singleMealIngredient = new InsideCategory(baseUrl);
     singleMealIngredient.singleMealInside();
@@ -260,96 +258,37 @@ $("aside .links ul li:nth-child(5)").click(() => {
 
   // Name Validate
   const nameInput = $('.input-fields input[name="y-name"]');
-  const nameParent1 = $(".input-fields .parent-name");
-  const nameParent2 = $(".input-fields .parent-email");
-  const nameChild1 = $(".input-fields .child-name");
-  const nameChild2 = $(".input-fields .child-email");
   const nameRegex = /^[a-zA-Z]{1,}$/;
 
-  contact.validate(
-    nameInput,
-    nameParent1,
-    nameParent2,
-    nameChild1,
-    nameChild2,
-    nameRegex
-  );
+  // contact.validate(nameInput, nameRegex);
 
   // Email Validate
   const emailInput = $('.input-fields input[name="y-email"]');
-  const emailParent1 = $(".input-fields .parent-email");
-  const emailParent2 = $(".input-fields .parent-name");
-  const emailChild1 = $(".input-fields .child-email");
-  const emailChild2 = $(".input-fields .child-name");
   const emailRegex = /^\S+@\S+\.\S+$/;
 
-  contact.validate(
-    emailInput,
-    emailParent1,
-    emailParent2,
-    emailChild1,
-    emailChild2,
-    emailRegex
-  );
+  // contact.validate(emailInput, emailRegex);
 
   // Phone Validate
   const phoneInput = $('.input-fields input[name="y-phone"]');
-  const phoneParent1 = $(".input-fields .parent-phone");
-  const phoneParent2 = $(".input-fields .parent-age");
-  const phoneChild1 = $(".input-fields .child-phone");
-  const phoneChild2 = $(".input-fields .child-age");
   const phoneRegex = /^01[0125][0-9]{8}$/;
 
-  contact.validate(
-    phoneInput,
-    phoneParent1,
-    phoneParent2,
-    phoneChild1,
-    phoneChild2,
-    phoneRegex
-  );
+  // contact.validate(phoneInput, phoneRegex);
 
   // Age Validate
   const ageInput = $('.input-fields input[name="y-age"]');
-  const ageParent1 = $(".input-fields .parent-age");
-  const ageParent2 = $(".input-fields .parent-phone");
-  const ageChild1 = $(".input-fields .child-age");
-  const ageChild2 = $(".input-fields .child-phone");
   const ageRegex = /^[0-9]{1,2}$/;
 
-  contact.validate(
-    ageInput,
-    ageParent1,
-    ageParent2,
-    ageChild1,
-    ageChild2,
-    ageRegex
-  );
+  // contact.validate(ageInput, ageRegex);
 
   // Password Validate
   const passwordInput = $('.input-fields input[name="y-password"]');
-  const passwordParent1 = $(".input-fields .parent-password");
-  const passwordParent2 = $(".input-fields .parent-rePassword");
-  const passwordChild1 = $(".input-fields .child-password");
-  const passwordChild2 = $(".input-fields .child-rePassword");
   const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-  contact.validate(
-    passwordInput,
-    passwordParent1,
-    passwordParent2,
-    passwordChild1,
-    passwordChild2,
-    passwordRegex
-  );
+  // contact.validate(passwordInput, passwordRegex);
 
   // RePassword Validation
-
   const repasswordInput = $('.input-fields input[name="y-password-confirm"]');
-  const repasswordParent1 = $(".input-fields .parent-rePassword");
-  const repasswordParent2 = $(".input-fields .parent-password");
-  const repasswordChild1 = $(".input-fields .child-rePassword");
-  const repasswordChild2 = $(".input-fields .child-password");
+  let rePassIsValid = false;
 
   repasswordInput.keyup((e) => {
     const inputValue = e.target.value;
@@ -357,30 +296,38 @@ $("aside .links ul li:nth-child(5)").click(() => {
 
     const passwordValue = passwordInput.val();
 
-    if (inputValue !== passwordValue) {
+    if (inputValue !== passwordValue || inputValue.length == 0) {
       console.log("notvalid");
-      repasswordParent1.removeClass("d-none");
-      repasswordParent2.removeClass("d-none");
-      repasswordChild1.removeClass("visually-hidden");
-      repasswordChild2.addClass("visually-hidden");
+      repasswordInput.addClass("is-invalid");
+      repasswordInput.removeClass("is-valid");
+      rePassIsValid = false;
     } else {
       console.log("valid");
-      repasswordParent1.addClass("d-none");
-      repasswordParent2.addClass("d-none");
-      repasswordChild1.removeClass("visually-hidden");
-      repasswordChild2.removeClass("visually-hidden");
+      repasswordInput.addClass("is-valid");
+      repasswordInput.removeClass("is-invalid");
+      rePassIsValid = true;
     }
   });
 
-  // Submit
-  contact.submit(
-    nameParent1,
-    emailParent1,
-    phoneParent1,
-    ageParent1,
-    passwordParent1,
-    repasswordParent1
-  );
+  const formData = document.querySelector(".input-fields form");
+
+  // && won't check the next until the first is true / if it is false will exit the condition
+  formData.addEventListener("keyup", () => {
+    if (
+      contact.validate(nameInput, nameRegex) &&
+      contact.validate(emailInput, emailRegex) &&
+      contact.validate(phoneInput, phoneRegex) &&
+      contact.validate(ageInput, ageRegex) &&
+      contact.validate(passwordInput, passwordRegex) &&
+      rePassIsValid
+    ) {
+      console.log("all valid");
+      $(".input-fields .submit").removeClass("disabled");
+    } else {
+      console.log("all not valid");
+      $(".input-fields .submit").addClass("disabled");
+    }
+  });
 });
 
 $("main .single-meal").removeClass("d-none");
